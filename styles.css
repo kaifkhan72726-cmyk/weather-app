@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 24px 14px;
+  color: #fff;
+  background: linear-gradient(160deg, #4facfe, #00c6fb);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+#search-form {
+  display: flex;
+  gap: 8px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+#city-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 24px;
+  font-size: 1rem;
+}
+
+#search-form button {
+  padding: 0 18px;
+  border: none;
+  border-radius: 24px;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  cursor: pointer;
+}
+
+#message {
+  text-align: center;
+  margin: 14px 0;
+}
+
+#current {
+  max-width: 480px;
+  margin: 14px auto;
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+#icon {
+  font-size: 4.5rem;
+}
+
+#temp {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+#forecast {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  max-width: 480px;
+  margin: 14px auto;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}
+
+.day {
+  flex: 1;
+  font-size: 0.85rem;
+}
+
+.day .emoji {
+  font-size: 1.8rem;
+  margin: 4px 0;
+}
+
+body.sunny  { background: linear-gradient(160deg, #f7971e, #ffd200); color: #3a2a00; }
+body.cloudy { background: linear-gradient(160deg, #606c88, #3f4c6b); }
+body.rainy  { background: linear-gradient(160deg, #373b44, #4286f4); }
+body.snowy  { background: linear-gradient(160deg, #83a4d4, #b6fbff); color: #123; }
+body.stormy { background: linear-gradient(160deg, #141e30, #5b2a86); }
+ #recent {
+display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 480px;
+  margin: 10px auto 0;
+}
+
+.chip {
+  padding: 4px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+/* Button par mouse le jao to gehra ho */
+#search-form button:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Box par click karne par safed outline */
+#city-input:focus {
+  outline: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Khali forecast box chhupa do */
+#forecast:empty {
+  display: none;
+}
+
+/* Chhoti screen (mobile) ke liye */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #icon {
+    font-size: 3.5rem;
+  }
+
+  #temp {
+    font-size: 2.2rem;
+  }
+}
